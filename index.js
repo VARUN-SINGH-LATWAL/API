@@ -1,6 +1,12 @@
-console.log("welcome to ebook api..");
+import app from "./src/app"
 
-function test() {
-  console.log("varun");
+
+const startServer =()=>{
+  const port = process.env.PORT || 3000
+
+app.listen(port,()=>{
+      console.log(`Listening to port: ${port}`)
+})
 }
-test();
+
+startServer()
